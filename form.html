@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+   <title></title>
+</head>
+
+<body>
+    <form>
+        <table>
+            <tr><td><label>Enter your Name : </label></td> 
+                <td><input type="text" name="uname" required=""></td></tr>
+            <tr><td><label>Enter your Email :</label></td>
+                <td><input type="email" name="eml"></td></tr>
+            <tr><td><label>Enter your Contact :</label></td>
+                <td><input type="tel" name="mob" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" </td></tr>
+            <tr><td><label>Enter your Password :</label></td>
+                <td><input type="password" name="psw" pattern="[a-z]{3}[A-Z]{1}[0-9]{4}"></td></tr>
+            <tr><td><label>Enter your DOB :</label></td>
+                <td><input type="date" name="dob"></td></tr>
+            <tr><td><label>Upload your Image :</label></td>
+                <td><input type="file" name="pic"></td></tr>
+            <tr><td><label>Select your Category :</label></td>
+                <td>
+                    male<input type="radio" name="cate" value="M"> 
+                    female<input type="radio" name="cate" value="W">
+                    Non Binary<input type="radio" name="cate" value="Nb"> </td></tr>
+            <tr><td><label>Select your Choice :</label></td>
+                <td>
+                    Java<input type="checkbox" name="java"> 
+                    C<input type="checkbox" name="C"> 
+                    C++<input type="checkbox" name="C++">
+                </td></tr>
+            <tr><td><label>Select your Section :</label></td>
+                <td><select name="section">
+                <option value="default" selected="" disabled="">Section List</option>
+                <option value="A">Section A</option>
+                <option value="B">Section B</option>
+                <option value="C">Section C</option>
+                </select></td></tr>
+
+            <tr><td><label>Address :</label></td>
+                    <td><textarea name="address" rows="8" cols="80"></textarea></td></tr>
+
+            <tr>
+                <td>
+                    <input type="submit" name="" value="submit">
+                    <input type="reset" name="" value="reset">
+                  
+                </td>
+            </tr>
+                 
+        </table>
+    </form>
+</body>
+  
+</html>
