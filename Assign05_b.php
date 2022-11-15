@@ -2,38 +2,38 @@
     function reverseDigits($num)
     {
         $rev = 0;
-        $rem = 0;
-        $temp = $num;
-        while ($temp!=0)
+        while ($num>1)
         {
-            $rem = $temp % 10;
-            $rev = $rev * 10 + $rem;
-            $temp /= 10;
+            $rev = $rev * 10 + $num % 10;
+            $num = (int)$num / 10;
         }
-        echo "$num";
-        echo "Reverse the number : $rev</br>";
+        
+        echo "Reverse the number : $rev";
+        printf("\n");
         return $rev;
     }
      
     function square($num)
     {
         $sq=$num*$num;
-        echo "Square of $num is $sq</br>";
+        echo "Square of $num is $sq";
+        // echo "</br>";
+        printf("\n");
         return ($num * $num);
     }
 
     function root($num)
     {
         echo "Underoot the number ";
-        echo sqrt($num);
-        echo "</br>";
+        echo (int)sqrt($num);
+        printf("\n");
+        // echo "</br>";
         return sqrt($num);
     }
      
     function checkAdamNumber($num)
     {
-        $a = square($num);
-        $b = reverseDigits($a);
+        $b = reverseDigits(square($num));
         $c = root($b);
         $d = reverseDigits($c);
         
@@ -49,8 +49,9 @@
      
     
     
-    $num = 12; 
-    echo "Input number is $num</br>";
+    $num = (int)readline('Enter the number : '); 
+    echo "Input number is $num";
+    printf("\n");
     if(checkAdamNumber($num)){
         echo "Adam Number";
     }
